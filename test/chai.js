@@ -17,7 +17,7 @@ const assert = chai.assert; // no chaining possible;
 // a.should.be.equal(b);
 
 // assert
-assert.equal(a,b,"A and B are not equal")
+// assert.equal(a,b,"A and B are not equal")
 
 //Objects/string/boolean
 function myObj(){
@@ -42,7 +42,7 @@ function myObj(){
 // x.should.be.deep.equals(y);
 
 //assert 
-assert.deepEqual(x,y,"X and Y are not equal")
+//assert.deepEqual(x,y,"X and Y are not equal")
 
 // //chaning experssions
 // //x is an object; x and y are equal
@@ -54,4 +54,16 @@ assert.deepEqual(x,y,"X and Y are not equal")
 let numbers = [0,1,2,3];
 //expect(numbers).to.be.an("array").that.include(0,"Number is not included in the array");
 //numbers.should.be.an("array").that.include(0);
-assert.isArray(numbers,"Number is not array")
+//assert.isArray(numbers,"Number is not array")
+
+//should extras
+// should -> object.prototype -> a.should
+function writeToFile(error){
+    //should extras
+    // normal scenarios
+    // error.should.not.exist();
+    should.not.exist(error);
+
+}
+
+writeToFile(undefined);
